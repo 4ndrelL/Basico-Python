@@ -1,0 +1,21 @@
+import turtle
+
+def main():
+    window = turtle.Screen()
+    cuadro = turtle.Turtle()
+    
+    make_square(cuadro)
+    turtle.mainloop()
+
+def make_square(cuadro):
+    length = int(input('Ingrese el tamaño de cuadrado:'))
+
+    for i in range(4):
+        make_line_and_turn(cuadro, length)    
+
+def make_line_and_turn(cuadro, length):
+    cuadro.forward(length)
+    cuadro.left(90)
+
+if __name__=='__main__':
+    main()
